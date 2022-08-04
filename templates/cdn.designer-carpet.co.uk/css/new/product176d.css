@@ -1,0 +1,1027 @@
+#Breadcrumbs {
+    display: none;
+}
+#Product {
+    padding: 15px 15px 0 15px;
+    margin: auto;
+    max-width: 1300px;
+}
+
+/* IMAGES */
+#Images{
+	width:45%;
+    max-width: 650px;
+	margin-right:50px;
+}
+#ImageWidthLabel{
+	padding: 5px;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+    bottom: 20px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+#Thumbnails{
+	margin-left:-15px;
+	width:calc(100% + 15px);
+}
+#Thumbnails>*{
+	width:calc(25% - 15px);
+	margin:15px 0px 0px 15px;
+	border:solid transparent 2px;
+    height: 80px;
+    object-fit: cover;
+    overflow: hidden;
+}
+#Thumbnails img:hover{
+	border:solid #72AC96 2px;
+	cursor:pointer;
+}
+
+@media (min-width:1000px) {
+   #Thumbnails>*{
+    height:110px;   
+    }
+}
+@media (min-width:1200px) {
+   #Thumbnails>*{
+    height:130px;   
+    }
+}
+
+/* PRODUCT INFORMATION */
+#ProductInfo {
+	width:50%;
+}
+#Name {	
+    font-size:30px;
+	padding: 15px 0 10px 0;
+	letter-spacing: -0.5px;
+	font-weight: 700;
+	line-height: 1.2em;
+}
+#Product #SKU, #Product [data-reflect='real_name'], #Product [data-reflect='supplier_code'] {
+	color:#707070;
+	font-size:13px;
+	text-transform: uppercase;
+    margin: 0 5px;
+}
+#Product #SKU::before {
+	content:'ID:\00a0';
+}
+#Product [data-reflect='real_name'] {
+ margin-top: 7px;
+display: inline-block;
+}
+
+/* PRICING */
+#Price, #PriceM2, #RugPrice {	
+	font-size: 30px;
+	font-weight: 500;	
+	color: #72ac96;
+	font-feature-settings: 'lnum' 1;
+	line-height: 1em;
+}
+#Retail{
+	text-decoration:line-through;
+}
+#Price::before, #RugPrice::before{
+	content:'\00a3';
+}
+#Saving::before {
+	content:"RRP \00a3";
+	font-size:14px;
+}
+#Saving [data-reflect='saving']{
+	margin-left:10px;
+}
+#Saving [data-reflect='saving']::before{
+	content:"SAVE\00a0";
+}
+#Saving [data-reflect='saving']::after{
+	content:"%";
+}
+#Saving {
+	padding-top:8px;
+}
+#Saving span {
+	font-size:14px;
+}
+
+/* SIZE OPTIONS */
+.carpet-options {
+	margin-top:25px;
+	padding:15px 0 0 0;
+	border-top:1px solid #EEE;
+}
+.carpet-options label {	
+	padding: 0 0 10px 0;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+#Product input, #Product select {
+	border:1px solid #CCC;
+	height:36px;
+	line-height: 36px;
+	padding: 0 10px;	
+	color: #111;
+	box-sizing: content-box;
+	background:#F7F7F7;
+	margin:0 5px 0 3px;
+	letter-spacing: 0.5px;
+    font-size: 14px;
+}
+.carpet-options input {
+	width: 90px;
+}
+#Product select {
+    background: url(https://cdn.designer-carpet.co.uk/images/icons/arrow-down.svg) no-repeat right 10px center #F7F7F7;
+    background-size: 13px;
+    padding-right: 35px;
+	width: 75px;
+}
+#Size select.custom {
+    width:auto;
+}
+#Size select.custom+input {
+    margin-left: 10px;
+}
+#Size{
+	padding-top:10px;
+}
+#Size>*:not(.hidden)+*, #RugSize>*:not(.hidden)+*{
+	margin-left:20px;
+}
+#Size>*::before, #Size>*::after, #Size span,
+#RugSize>*::before, #RugSize>*::after {
+	font-size:16px;
+	font-weight: 400;
+}
+#Size p {
+    font-size: 12px;
+    padding-top: 15px;
+}
+#Length::before, #RugLength::before {
+	content:"Length:\00a0";
+}
+#Width::before, #RugWidth::before {
+	content:"Width:\00a0";
+}
+#Area::before{
+	content:"Area:\00a0";
+}
+#Length::after, #Width::after,
+#RugLength::after, #RugWidth::after
+{	
+	content:"m";
+}
+#Area::after{
+	content:"m²";
+	padding-left:2px;
+}
+
+/* MINI DESCRIPTION */
+.mini-description p {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 25px;
+    font-size: 14px;
+}
+
+/* STAIN GUARD */
+.stainguard {
+	margin-top: 20px;
+    overflow: hidden;
+    border-top: 1px solid #EEE;
+    padding-top: 20px;
+}
+#AddStainguard::before {
+	content: '';
+	display: inline-block;
+	margin: 2px 8px 0 0;
+    border: 1px solid #CCC;
+    background-color: #F7F7F7;
+    width: 18px;
+    height: 18px;
+    align-self: flex-end;
+}
+#AddStainguard.active::before {
+    border: 1px solid #72ac96;
+    background: url(https://cdn.designer-carpet.co.uk/images/icons/tick.svg) no-repeat right center #fff;
+}
+#AddStainguard:hover span:first-of-type {
+	text-decoration:underline;
+}
+.question-mark svg {
+	width:18px;
+	height:18px;
+	margin-left:5px;
+	margin-top:3px;
+}
+#AddStainguard [data-reflect='extra']::before{
+	content:"(+\00a3";
+	padding-left: 5px;
+}
+#AddStainguard [data-reflect='extra']::after{
+	content:')';
+}
+.stainguard-description {
+    max-height:0;
+    transition: max-height ease-in-out 0.5s;
+}
+.stainguard.open .stainguard-description {
+    max-height:1000px;    
+}
+.stainguard-description h2 {
+    padding:25px 0 5px 0;
+}
+.stainguard-description span {
+    padding: 0 15px;
+    line-height: 1.3em;
+}
+
+/* PURCHASE BUTTONS */
+#Actions {
+	margin-top:20px;
+	border-top:1px solid #EEE;
+	padding-top: 25px;
+}
+#AddSample, #AddToBasket, #GetQuote, #CreateARug, #OrderRug, button.yes, button.no {
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color .25s ease-in-out,border-color .25s ease-in-out,color .25s ease-in-out;
+    padding: 0 5px;
+    line-height: 4.2em;
+    background-color: #72ac96;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+#AddSample, button.no {
+	background-color: #000;
+    width: 49%;
+}
+#AddToBasket, #GetQuote, button.yes {
+    width:49%;
+}
+#AddSample:hover, button.no:hover  {
+	background-color: #333;
+}
+#AddSample:not(.hidden)~#AddToBasket, #AddSample:not(.hidden)~#GetQuote {
+    margin-left:2%;
+}
+#AddToBasket:hover, #GetQuote:hover, #OrderRug:hover, button.yes:hover {
+   background-color: #5a8a78;
+}
+#CreateARug {
+    border: solid #111 1px;    
+    background: #FFF;
+    transition: background-color .25s ease-in-out,border-color .25s ease-in-out,color .25s ease-in-out;	    
+    color: #111;
+	margin-top:25px;
+}
+#CreateARug:hover {
+	background: #111;
+	color: #FFF;
+	transition: background-color .25s ease-in-out,border-color .25s ease-in-out,color .25s ease-in-out;
+}
+#Quantity input{
+	width:100px;
+	text-align: center;
+	height:54px;
+	padding:5px;
+	line-height: 54px;			
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	font-size: 15px;
+	margin:0 5px;
+}
+#Quantity button {
+	width:50px;
+	height:54px;
+	display: inline-block;
+	border:1px solid #CCC;
+	background: 50% center no-repeat;
+	background-size:15px auto;
+}
+button#increase{
+    background-image: url("https://cdn.designer-carpet.co.uk/images/icons/plus.svg")
+}
+button#decrease {
+	background-image: url("https://cdn.designer-carpet.co.uk/images/icons/minus.svg");
+}
+#Quantity:not(.hidden)+#AddToBasket {
+	margin-left:15px;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* QUOTE FORM */
+#QuoteForm{
+	background:#f7f7f7;
+	border:1px solid #EEE;
+	padding:10px 20px;
+	padding-top:25px;
+	max-width:80%;
+	margin:10px auto;
+}
+#QuoteForm label {
+	text-transform: uppercase;
+    font-size: 15px; 
+	padding-bottom: 5px;
+}
+#QuoteForm.minimised{
+	height:0px;
+	width:0px;
+	padding:0;
+}
+#QuoteForm.transitioning{
+	transition:height,width,padding;
+	transition-duration: 0.2s;
+}
+#QuoteForm .close{
+	margin:0px;
+	padding:5px;
+	background: #f7f7f7;
+	top:5px;
+	right:2px;
+}
+#QuoteForm .close svg{
+	stroke:#999;
+	stroke-width:1.5px;
+}
+#QuoteForm input{
+	padding:0 10px;
+	margin-top:5px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #EEE;
+	text-align: center;
+	font-size: 14px;
+}
+#QuoteForm .send{
+	margin:12px 0;
+	max-width: 100%;
+	background: #dbbc26;
+	color: #000;
+}
+#QuoteForm .send:hover{
+	color:#000;
+}
+
+/* PRODUCT MESSAGING */
+#ProductWarning {
+	margin:0 0 20px 0;
+	font-size: 18px;
+}
+#ProductWarning a {
+	font-weight:500;
+}
+
+/* PRICE TIERS */
+.price-tiers{		
+	margin:40px auto 10px;
+	border-top: 1px solid #ccc;	
+	border-left: 1px solid #ccc;	
+	border-right: 1px solid #ccc;	
+}
+.price-tiers>span{
+	border-bottom: 1px solid #ccc;
+	padding: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+   	font-size: 12px;        
+   	letter-spacing: 1px;
+	background: #ddd;
+	color: #111;
+}
+.price-tiers>div{
+	border-bottom:1px solid #ccc;
+}
+.price-tiers .flex span {	
+	padding: 9px 2px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+.price-tiers>div.active{
+	background:#f8f8f8;
+}
+.price-tiers [data-reflect^='price']::before{
+	content:'\00a3';
+}
+.price-tiers [data-reflect^='price']::after{
+	content:'\00a0m\00b2';
+}
+
+/* TABS */
+#Tabs{
+	margin:50px 0;
+}
+#Tabs .tab{
+	padding:15px 20px;
+	position:relative;
+	background: #EEE;
+	margin-right:2px;		
+}
+#Tabs .tab span {
+	font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+#Description {
+	line-height: 1.8em;
+	font-size: 18px;
+}
+#Tabs .tab.active{
+	text-decoration: underline;
+}
+#Tabs .tab:nth-child(1){
+	z-index:4;
+}
+#Tabs .tab:nth-child(2){
+	z-index:3;
+}
+#Tabs .tab:nth-child(3){
+	z-index:2;
+}
+#Tabs .tab.active{
+	z-index:99;
+}
+#Tabs .tab.active,
+#Tabs .tab.active,
+#Tabs>*:not(:first-child){
+	background:#f8f8f8;
+}
+#Tabs .tab:not(.active):hover,
+#Tabs .tab:not(.active):hover{
+	background:#d0d0d0;
+}
+#Tabs>*:not(:first-child){
+	padding:30px;
+}
+#Tabs>*:not(:first-child):not(.active){
+	display:none;
+}
+#Tabs #CollapseTabs,#Tabs #ExpandTabs{
+	font-size:0;
+}
+#Tabs>*:first-child svg{
+	fill:none;
+	stroke:#303030;
+}
+#Tabs:not(.collapsed) #ExpandTabs,
+#Tabs.collapsed>*:first-child button:not(#ExpandTabs){
+	display:none;
+}
+#Tabs .tab>*{
+	position:relative;
+	z-index:1;
+}
+#StatsTabContent span {
+	line-height: 1.3em;
+}
+#StatsTabContent>*:not(:empty)~*:not(:empty){
+	margin-top:20px;
+}
+#StatsTabContent [data-reflect='composition']:not(:empty)::before{
+	content:"Composition:\00a0";
+	font-weight: 600;
+}
+#StatsTabContent [data-reflect='colour']:not(:empty)::before{
+	content:"Colour:\00a0";
+	font-weight: 600;
+}
+#StatsTabContent [data-reflect='type']:not(:empty)::before{
+	content:"Type:\00a0";
+	font-weight: 600;
+}
+#StatsTabContent [data-reflect='construction']:not(:empty)::before{
+	content:"Construction:\00a0";
+	font-weight: 600;
+}
+#StatsTabContent [data-reflect='prl']:not(:empty)::before{
+	content:"Pattern Repeat Length:\00a0";
+	font-weight: 600;
+}
+#StatsTabContent [data-reflect='prw']:not(:empty)::before{
+	content:"Pattern Repeat Width:\00a0";
+	font-weight: 600;
+}
+#StatsTabContent [data-reflect='prl']:not(:empty)::after,
+#StatsTabContent [data-reflect='prw']:not(:empty)::after{
+	content:"m"
+}
+#StatsTabContent [data-reflect='tog']:not(:empty)::before{
+	content:"Tog:\00a0";
+	font-weight: 600;
+}
+#StatsTabContent [data-reflect='decibel_rating']:not(:empty)::before{
+	content:"Decimbel Rating:\00a0";
+	font-weight: 600;
+}
+#StatsTabContent [data-reflect='density']:not(:empty)::before{
+	content:"Density:\00a0";
+	font-weight: 600;
+}
+#StatsTabContent [data-reflect='double_stick']:not(:empty)::before{
+	content:"Double Stick:\00a0";
+	font-weight: 600;
+}
+#StatsTabContent [data-reflect='suitability']:not(:empty)::before{
+	content:"Suitability:\00a0";
+	font-weight: 600;
+}
+#AccessoriesTabContent[data-reflect='products:array']{
+	padding:25px 25px 0 0px;
+}
+#AccessoriesTabContent .product.card{
+	background:white;
+	width:calc(20% - 25px);
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+#AccessoriesTabContent .product.card .saving span {
+    font-size: 12px;
+}
+
+/* RUGBUILDER */
+#RugTabContent .preview{
+	width:50%;
+}
+#RugTabContent [data-reflect='borders:array']{
+	position:relative;	
+	height:315px;
+	overflow-y:hidden; 
+    padding-bottom: 15px;
+}
+#RugTabContent #BordersWrapper{
+	position:relative;
+    padding-bottom: 25px;
+    overflow: hidden;
+}
+#RugTabContent #BordersWrapper~*{
+	margin-top:10px;
+}
+#RugTabContent button[data-reflect='border']{
+	background:transparent;
+	background-size:cover;
+	border:solid #d0d0d0 1px;
+	width:125px;
+	margin:15px 0px 0px 15px;
+}
+#RugTabContent button[data-reflect='border']:first-of-type, #RugTabContent button[data-reflect='border']:nth-child(2) {
+    margin-left: 0;
+}
+#RugTabContent button[data-reflect='border'].active{
+	border-color:#303030;
+}
+#RugTabContent .right.column{
+	align-items:center;
+	justify-content:center;
+    text-align: center;
+	margin-left:30px;
+}
+#RugTabContent .right.column>*+*{
+	margin-top:15px;
+}
+#RugTabContent [data-reflect='name'] {
+	font-size:24px;
+	font-weight:600;
+    margin-bottom: 10px;
+}
+#RugTabContent input{
+	width:75px;
+    background: #FFF;
+}
+#RugTabContent #AddQueueJump {
+    height:auto;
+}
+#RugTabContent [data-reflect='name']~.length>span:first-child,
+#RugTabContent [data-reflect='name']~.width>span:first-child{
+	width:80px;
+    text-align: right;
+    margin-right: 7px;
+}
+#RugTabContent [data-reflect='extra']{
+	font-size:28px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+#RugTabContent [data-reflect='extra']::before{
+	content:"+\00a3";
+}
+#RugTabContent #OrderRug{
+	width:100%;
+	max-width:300px;
+    margin-top: 30px;
+}
+#RugTabContent p {
+    line-height: 1.6em;
+}
+#BespokePriority {
+    position: relative;
+}
+#BespokePriority label {
+    font-size: 16px;
+}
+#BespokePriority label {    
+    cursor: pointer;
+    line-height: 1.2em;
+}
+#BespokePriority input[type=checkbox]:checked + label::before {
+    border: 1px solid #72ac96;
+    background: url(https://cdn.designer-carpet.co.uk/images/icons/tick.svg) no-repeat right center;
+}
+#BespokePriority #AddQueueJump {
+    -webkit-appearance: none;
+    border:none;
+}
+#BespokePriority label::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+    border: 1px solid #D3D3D3;
+    border-radius: 3px;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    background-color: #FFF;
+}
+.rugnotice {
+    display: block;
+    text-align: center;
+    line-height: 1.3em;
+    padding-top: 15px;
+}
+
+
+/* RECOMMENDATIONS */
+#Recommendations{
+	margin-left:-25px;
+	margin-bottom: 50px; 
+    /*padding: 0 15px;*/
+}
+#Recommendations>.product.card{
+	width:calc(25% - 25px);
+	margin:40px 0px 0px 25px;
+}
+#Recommendations>.product.card>label.above{
+	pointer-events:none;
+}
+#Recommendations>.product.card .above{
+	margin: 20px 0 15px 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+#RemnantsOfThisCarpet+#RemnantsInThisRange.wide{
+	margin-left:auto;
+}
+
+/* Item Added Messaging */
+#ItemAdded {
+    padding: 30px;
+    background: #f6f6f6;
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    z-index: 2;
+    margin: 15px 0 30px 0;
+    border:1px solid #CCC;
+}
+#ItemAdded span::before {
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    top: 0;
+    left: 0px;
+    height: 25px;
+    width: 25px;    
+    border: 1px solid #72ac96;
+    border-radius: 50%;
+    background: url(https://cdn.designer-carpet.co.uk/images/icons/tick.svg) no-repeat right center;
+}
+#ItemAdded a {
+    background: #72ac96;
+    color: #FFF;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 2px;
+    letter-spacing: 1px;
+    max-width: 80%;
+}
+
+/* POP UPS (STAIN GUARD/ACCESSORIES) */
+.popup {
+	background:rgba(0,0,0,0.5);
+	z-index:999;
+}
+.popup .dialog{
+	background:#fff;
+	color:#111;
+	max-width:750px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 25px;
+}
+.popup .titlebar span {
+    display: block;
+    background: #f8f8f8;
+    padding: 20px 15px;
+    font-weight: 700;
+    font-size: 20px;
+}
+.popup p {
+    font-size: 16px;
+    margin: 10px 0 30px 0;
+}
+.dialog .content {
+    padding: 15px 30px 25px 30px;
+}
+.popup .justify button {
+    width:48%;
+    font-size: 13px;
+}
+.popup [data-reflect='extra']::before{
+	content:"(+\00a3";
+    font-size: 13px;
+}
+.popup [data-reflect='extra']::after{
+	content:")";
+    font-size: 13px;
+}
+#AccessoriesPopup .dialog .content .image{
+	display:inline-block;
+	margin: 15px 0 15px 25px;
+	border:solid #EEE 1px;
+	width:calc(33.33% - ((25px * 2) / 3));
+}
+#AccessoriesPopup .dialog .content .image:first-child{
+    margin-left:0px;
+}
+#AccessoriesPopup .dialog .content img{
+    width:100%;
+}
+
+/* Start iPad Pro Adjustments */
+@media all and (max-width:1024px){
+    
+    #Images {
+        margin-right:30px;
+    }
+    #Description {
+        font-size: 16px;
+    }
+    #Tabs .tab span {
+        font-size:14px;
+    }
+    #RugTabContent #BordersWrapper {
+        padding-bottom: 0;
+    }
+    
+}
+/* End iPad Pro Adjustments */
+
+/* Start iPad Adjustments */
+@media all and (max-width:768px){
+    
+    #Images {
+        margin-right:0;
+        width:100%;
+        max-width: none;
+    }
+    #BigImage {
+        height:550px;
+        overflow: hidden;
+    }
+    #BigImage img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: center;
+        object-position: center;
+    }
+    .product-info {
+        flex-direction: column;
+    }
+    #ProductInfo {
+        width:100%;
+        margin-top:30px;
+    }
+    #CollapseTabs{
+		display:none;
+	}
+    #Length select, #Width select {
+		max-width: 70px;
+	}
+	#Size select.custom {
+		max-width: 100%;        
+	}
+    .price-tiers .flex span {
+        padding: 15px 2px;
+    }
+    #Recommendations>.product.card{
+		width:calc(25% - 25px);
+	}
+	#AccessoriesTabContent .product.card{
+		width:calc(25% - 25px)
+	}
+    #RugTabContent [data-reflect='name'] {
+        font-size: 20px;
+    }
+    #Recommendations>.product.card {
+        width: calc(50% - 25px);
+        margin: 25px 0px 0px 25px;
+        margin: 40px 0px 0px 25px;
+    }
+    
+} /* End iPad Adjustments */
+
+/* Start Smartphone/iPhone Adjustments */
+@media all and (max-width:550px){ 
+    
+    #Product {
+        padding: 10px 10px 0 10px;
+    }
+    #BigImage {
+        height:auto;
+        overflow: auto;
+    }
+    #ImageWidthLabel {
+        font-size:12px;        
+    }
+    #Name {
+        font-size: 26px;
+    }
+    #Price, #PriceM2, #RugPrice {
+        font-size: 28px;
+    }
+    #Length select, #Width select {
+        max-width: 35px;
+        font-size: 13px;
+    }
+    #Product select {    
+        padding-right: 26px;
+        background-size: 11px;
+    }
+    #Size select.custom+input {
+        margin-left: 3px;
+        width: 40px;
+    }
+    .carpet-options input {
+        width:40px;
+    }
+    .stainguard {
+        margin-top:15px;
+    }
+    #AddStainguard span, #Size>*::before, #Size>*::after, #Size span, #RugSize>*::before, #RugSize>*::after {
+        font-size:14px;
+    }   
+    .question-mark svg, #AddStainguard::before {
+        width:16px;
+        height: 16px;
+    }
+    #Size div {
+        margin-bottom: 10px;
+    }
+    .purchase-buttons {
+        flex-direction: column;
+    }
+    #AddSample, #AddToBasket, #GetQuote, #CreateARug {        
+        width: 100%;
+        margin-bottom:15px;
+        margin-top:0;
+        font-size: 12px;        
+        line-height: 4.4em;
+    }
+    #AddSample:not(.hidden)~#AddToBasket, #AddSample:not(.hidden)~#GetQuote {
+        margin-left:0;
+    }
+    #AccessoriesTab{
+		display:none;
+	}
+    #Tabs>*:not(:first-child) {
+        padding: 25px 15px;
+    }
+    #RugTabContent .preview{
+		width:100%;
+		margin:0px auto 20px auto;
+	}
+	#RugTabContent>.flex{
+		flex-wrap:wrap;
+	}
+	#RugTabContent [data-reflect='borders:array']{
+		height:200px;
+	}
+	#RugTabContent button[data-reflect='border']{
+		width:75px;
+	}
+	#RugTabContent .right.flex.column{
+		width:100%;
+		margin:10px 0px 0px 0px;
+	}
+    #BespokePriority label {
+        cursor: pointer;
+        line-height: 1.3em;
+    }
+    #BespokePriority label {
+        font-size: 14px;
+    }
+    #ItemAdded {
+       flex-direction: column;
+       padding: 20px;
+    }
+    #ItemAdded span {
+       margin-bottom: 15px;
+    }
+    #Tabs .tab{
+		min-width:100px;
+	}
+    #Tabs .tab span {
+    font-size: 12px;
+    }
+	#Product:not(.no-rug) #DescriptionTab {
+		display:none;
+	}
+    #Recommendations {
+        margin-left: -15px;        
+    }
+    #AccessoriesTabContent .product.card{
+		width:calc(50% - 15px);        
+	}
+    #Recommendations>.product.card{
+		width:calc(50% - 15px);
+        margin: 20px 0px 50px 15px;
+	}
+    #RugTabContent #OrderRug{
+		max-width:100%;
+	}
+    .stainguard-description span {
+        font-size:14px;
+    }
+    #RugTabContent [data-reflect='extra'] {
+        font-size: 24px;
+    }
+    #RugTabContent p, #RugTabContent>span:first-of-type {
+        font-size: 13px;
+    }
+    .popup .dialog{        
+        margin: 0 15px;
+    }
+    .popup .titlebar span {        
+        padding: 15px 10px;        
+        font-size: 16px;
+    }
+    .popup p {
+        font-size: 13px;
+        margin: 5px 0 20px 0;
+    }
+    .dialog .content {
+        padding: 10px 10px 15px 10px;
+    }
+    .popup .justify button {
+        width:49%;
+        line-height:3.6em;
+        font-size: 12px;
+        padding: 0;
+    }
+    .popup .justify button span {
+        font-size: 12px;
+    }
+    #AccessoriesPopup .dialog .content .image {        
+        margin: 5px 0 10px 15px;        
+        width:calc(33.33% - ((15px * 2) / 3));
+    }
+    #Quantity {
+        width: 100%;
+    }
+    #Quantity input {
+        width:auto;
+        flex-grow: 1;        
+    }    
+    #Quantity:not(.hidden)+#AddToBasket {
+        margin-left:0;
+        margin-top:25px;
+    }
+    .mini-description p {
+        width:100%;
+        font-size: 14px;
+    }
+    
+} /* End iPhone Adjustments */

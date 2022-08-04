@@ -1,0 +1,422 @@
+/* PRE LOADING */
+#Loading svg{
+	width:100px;
+	height:auto;
+}
+#Loading svg *{
+	fill:#dbbc26;
+	transform-origin:50% 50%;
+}
+body:not(.chrome) #Loading svg{
+	animation:loading 2s infinite linear;
+}
+#Loading svg path:first-child{
+	animation:loading 2s infinite linear;
+}
+#Loading svg path:nth-child(2){
+	animation:loading 1.5s infinite linear;
+}
+@keyframes loading{
+	from{
+		transform:rotate(0deg);
+	}
+	to{
+		transform:rotate(360deg);
+	}
+}
+#Loading span{
+	margin-top:10px;
+}
+
+/* LAYOUT STYLES */
+#Page.has-filters {
+    padding: 25px;
+}
+#Page.has-filters #Content h1 {
+    font-size: 32px;
+    font-weight: 700;
+    width: 100%;
+    display: block;
+}
+#Page.has-filters #Content>h1, #Page.has-filters #Content .cat-intro h1 {
+    text-align: center;    
+    padding: 0;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+#Page.has-filters  #Content>p, #Page.has-filters #Content .cat-intro p {
+    max-width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;    
+    margin-bottom: 10px;
+    font-size:15px;
+}
+#Page.has-filters #Content {    
+	border-bottom: 1px solid #EEE;
+}
+#Page.has-filters #Content {
+	padding-top:15px;
+    padding-bottom:30px;
+}
+
+/* GRID INTRO STYLES */
+.intro-text {	
+	width: 100%;
+}
+#PhotoIntro p {	
+	padding-right: 40px;    
+}
+.sub-links {
+	margin-left:-20px;
+}
+.sub-links a, .sub-links span {
+	display: inline-block;
+	font-weight: 600;
+	font-size: 14px;
+	margin: 20px 0 20px 20px;
+	text-decoration: underline;	
+}
+.sub-links span {
+    text-decoration: none;
+}
+#PhotoIntro img {
+	width:100%;
+	height: auto;
+}
+.intro-image span {
+    z-index: 1;    
+    font-size: 10px;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 15px;
+    font-weight: 600;
+}
+
+/* GRID STYLES */
+#Page.has-filters #GridContainer {
+    margin:30px 0;
+}
+#Page.has-filters #GridContainer.flex {
+    flex-wrap: wrap;
+}
+#Grid {
+    width: calc(100% - 25% - 30px);
+}
+
+/* PAGINATION */
+#PageNav {
+    border-top: 1px solid #EEE;    
+    padding: 50px 0 0 0;
+}
+#PageNav * {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+#PageNav a.active, #PageNav a:hover {
+    color: #111;
+    padding-bottom: 3px;
+    border-bottom: 2px solid #333;
+    opacity: 1;
+}
+#PageNav a, #PageNav span {
+    padding: 0 3px;
+    margin: 0 5px;
+    opacity: 0.4;
+}
+.previous {
+    background: url(../../../designer-carpet.co.uk/images/icons/previous.svg) left center no-repeat;
+    background-size: 16px;
+    padding-left: 25px;
+}
+.first-page {
+    background: url(../../../designer-carpet.co.uk/images/icons/first-page.svg) no-repeat;
+    height: 16px;
+    width: 16px;
+    margin-right: 25px;
+}
+.next {
+    background: url(../../../designer-carpet.co.uk/images/icons/next.svg) right center no-repeat;
+    background-size: 16px;
+    padding-right: 25px;
+}
+.last-page {
+    background: url(../../../designer-carpet.co.uk/images/icons/last-page.svg) no-repeat;
+    height: 16px;
+    width: 16px;
+    margin-left: 25px;
+}
+#PageNav .disabled {
+    opacity: 0.2;
+    cursor: default;
+}
+
+/* GRID PRODUCTS */
+#Grid #Products{
+	margin:0 0 20px -25px;
+	transform-style: preserve-3d;
+	perspective: 3000px;
+}
+.product.card {
+    width: calc(25% - 25px);
+    margin: 0 0 50px 25px;
+    text-align: center;
+}
+
+/* NO PRODUCT RESULTS */
+#Loading.hidden~#Products:empty::after{
+	content:'None found.';
+	font-size:15px;
+	padding:10px;
+	color:red;
+}
+#SwitchTo {    
+    width: calc(25% - 25px);
+    border: solid #eee 5px;
+    margin: 0 0 50px 25px;
+    align-self: auto;
+    padding: 25px;
+    background: #fff;
+    transition: background 0.5s, border 0.5s;
+    min-height:300px;
+}
+#SwitchTo span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    transition:color 0.5s;
+    line-height: 1.3em
+}
+#SwitchTo:hover{
+    color: #fff;
+    border: 5px solid #72ac96;
+}
+#SwitchTo:hover span {
+    color: #72ac96;
+}
+
+/* DESKTOP CATEGORY INTROS */
+@media all and (min-width:1024px){
+	.intro-image {
+		min-height:425px;
+        margin-left:20px;
+	}
+    #PhotoIntro img {
+        object-fit: cover;    
+        position: absolute;
+        top: 0;
+        left: 0;  
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media all and (max-width:1280px){
+	#Products .product.card{
+		width:calc((100% / 3) - 25px);	
+	}	
+}
+
+/* IPAD PRO STYLES */
+@media all and (max-width:1024px){
+    
+    #Page.has-filters #Content {
+        padding-bottom: 25px;
+    }
+    #PhotoIntro {
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+    #PhotoIntro .half-width {
+        width: 100%;
+    }
+    .intro-text {
+        text-align: center;        
+    }
+    #PhotoIntro p {
+        padding-right: 0;
+    }
+    .intro-text p, #Page.has-filters  #Content>p, #Page.has-filters #Content .cat-intro p {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #PhotoIntro img {
+        padding: 25px 0 0 0;
+    }
+    
+    /* CONTROLS */    
+	#Grid .top.controls {
+		margin:0 0 30px 0;
+	}
+    .sort.button.select {
+        border: 1px solid #EEE;
+        padding: 12px 35px 12px 15px;
+        background: url(../../../designer-carpet.co.uk/images/icons/arrow-down.svg) no-repeat right 15px center #FFF;
+        background-size: 13px;
+    }
+    .top.controls .sort select {
+        font-size: 12px;
+        padding-left: 12px;
+    }
+    .controls .sort span.value {
+        letter-spacing: 1px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+    #Grid .sort::before {
+        content: 'SORT BY:\00a0';
+        font-size: 12px;
+        display: inline-block;
+        letter-spacing: 1px;   
+    }
+    .controls>div {
+        width: calc(50% - 12.5px);
+    }
+    #FilterButton {
+        background: url(../../../designer-carpet.co.uk/images/icons/filterside.svg) right 10px center no-repeat #000;
+        background-size: 20px;
+        color: #FFF;
+        padding: 12px 15px;        
+        letter-spacing: 1px;
+        font-weight: 500;        
+        width: 100%;
+        text-align: left;
+        display: block;        
+    }
+    #SortFilter * {
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    #SortFilter {
+        border: 1px solid #EEE;
+        padding: 12px;
+    }
+    .sorter {
+        align-self: flex-end;
+    }
+    .sort-label {
+        margin-right: 5px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        font-weight: 100;
+        font-size: 15px;
+    }
+    .sorter .value {
+        padding: 0;
+        -webkit-flex-grow: 1;
+        flex-grow: 1;
+    }
+    .sorter .value {
+        background: url(../../../designer-carpet.co.uk/images/icons/arrow-down.svg) no-repeat right 0px center #ffffff;
+        background-size: 13px;
+        padding-right: 25px;
+        text-transform: uppercase;
+        min-width: 150px;
+        padding: 8px 25px 8px 0;
+        font-size: 15px;
+        font-weight: 600;
+    } 
+    #Grid {
+        margin-top:0;
+    }
+    #Page.has-filters #GridContainer {
+        margin: 25px 0;
+    }
+    #Products .product.card, #SwitchTo {
+        width: calc((100% / 3) - 25px);
+    }	
+    #SwitchTo {
+        min-height:300px;
+    }
+
+} /* END IPAD PRO STYLES */
+
+/* IPAD STYLES */
+@media all and (max-width: 768px){
+
+    /*#Products .product.card {
+    width: calc(50% - 25px);
+    }*/
+
+} /* END IPAD STYLES */
+
+/* MOBILE STYLES */
+@media all and (max-width: 575px){
+    
+    #Page.has-filters {
+        padding: 15px;
+    }
+    #Page.has-filters #Content h1 { 
+        font-size: 24px;
+    }
+    .intro-text p, #Page.has-filters  #Content>p, #Page.has-filters #Content .cat-intro p {
+        font-size:13px;
+    }
+    #Page.has-filters #Content {
+        padding-bottom: 15px;
+    }
+    .intro-image {
+        min-height: auto;
+    }
+    .sub-links {
+        margin-left:-10px;
+    }
+    .sub-links a, .sub-links span {
+        margin: 10px 0 10px 10px;
+        font-size:11px;
+    }
+    .sort.button.select {        
+        padding: 10px 15px 10px 10px;
+        background: url(../../../designer-carpet.co.uk/images/icons/arrow-down.svg) no-repeat right 10px center #FFF;
+        background-size: 11px;
+    }
+    .top.controls .sort select {        
+        padding-left: 10px;
+        font-size: 11px;
+    }
+    .controls .sort span.value {
+        letter-spacing: 0.5px;
+        font-size: 11px;
+    }
+    #Grid .sort::before {
+        content: '';        
+    }
+    .controls>div {
+        width: calc(50% - 7.5px);
+    }
+    #FilterButton {
+        padding: 10px;        
+        letter-spacing: 0.5px;
+        font-size: 11px;         
+    }
+    #PageNav {        
+        padding-top: 25px;
+    }
+    #PageNav div.iblocks, .first-page, .last-page {
+        display: none;
+    }
+    #Grid .controls button svg {
+        padding: 2px;
+    }
+    #Grid #Products {
+        margin: 0 0 0 -15px;
+    }
+    #Products .product.card, #SwitchTo {
+        width: calc(50% - 15px);
+        margin: 0 0 40px 15px;
+        border-width: 3px;
+    }
+    #SwitchTo {
+      min-height:200px;
+    }
+  
+    #SwitchTo span{
+        font-size: 16px;
+        font-weight: 700;
+    }
+    
+} /* RND MOBILE STYLES */

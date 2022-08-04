@@ -1,0 +1,209 @@
+#BackToTop {display: none;}
+		  #Page {padding:0 0 75px 0;}
+			#Middle .content{max-width:100%;}
+			.hero-image {
+			height: 60vh;			
+    		max-height: 60vh;
+    		overflow-y: hidden;
+			background: #000;
+			}
+			.hero-image img {
+			width: 100%;
+    		height: 100%;
+    		-o-object-fit: cover;
+    		object-fit: cover;
+    		-o-object-position: center;
+    		object-position: center;			
+			}
+			.ecoText {			
+			color: #FFF;
+			max-width:1300px;
+			padding:0 25px;
+			}
+			.ecoText h1, .ecoInfo h2, h3{
+			font-family: MontserratRegular,Arial,Sans-Serif;
+			font-size: 36px;
+			line-height: 1.2em;
+			}
+		  	.ecoText p {
+			font-size: 18px;
+			width: 60%;
+			margin-bottom: 25px;
+			}
+		  	.shopEco {
+			background:#000;
+			color:#FFF;
+			padding:18px 30px;
+			text-transform: uppercase;
+			font-family: MontserratRegular,Arial,Sans-Serif;
+			font-size: 12px;
+			display: inline-block;
+			border-radius: 5px;
+			margin-top:15px;
+			letter-spacing: 1px;
+			}
+			.shopEco:hover {
+			background:#dbbc26;
+			color:#FFF;
+			}
+		  
+		  	#Middle .ecoCarpets, #Middle .container {
+			max-width: 1300px;
+			margin: auto;
+			}
+		  	
+		  	.ecoInfo {
+			padding: 10px 50px;
+			}
+		
+
+			.ecoInfo h2, h3 {
+			font-size: 28px;
+			letter-spacing: 1px;
+			}
+		  	h3 {margin-bottom: 10px;}
+
+			.ecoCarpets img {
+			width: 100%;
+    		height: auto;
+			}
+		  
+		  
+		  #ecobenefits {
+			 /* background: #f6f6f6;*/
+			  padding: 40px 15px;			  
+		  }
+		  #ecobenefits .one-third {
+			 padding:25px;
+		  }
+		  #ecobenefits span {
+			  font-family: MontserratRegular,Arial,Sans-Serif;
+			font-size: 16px;
+			  text-transform: uppercase;
+			  letter-spacing: 1px;
+			  margin: 10px 0 5px 0;
+			  display: block
+		  }
+		  #ecobenefits svg {
+			  height:20%;
+			  width:20%;
+		  }
+		  #ecoinfo {
+			  background: #f8f8f8;
+		  }
+		  .ecoproducts {
+			  margin-top:70px;
+		  }
+		  .ecoproducts img {
+			  width:100%;			  
+		  }
+		  .ecoproducts a:hover span {
+			 text-decoration: underline
+		  }
+		  .ecoproducts .flex div {
+			  padding:10px;			 
+		  }
+		  .sixths div {
+			  width: calc(100% / 6);
+		  }
+		  .fifths div {
+			  width: calc(100% / 5);
+		  }
+		  .ecoproducts span {
+			  display: block;
+			  padding: 10px 0;
+			  font-family: MontserratRegular,Arial,Sans-Serif;
+			  font-size: 16px;
+		  }
+		  .range-intro {
+			  max-width: 800px;
+		  }
+		  .range-intro p  {
+			  font-size: 17px;
+			  margin-bottom: 15px;
+		  }
+            
+            /* TABLET ALTERATIONS - Landscape and iPad Pro */
+		  	@media all and (max-width:1024px) {
+               
+                .hero-image img {opacity: 0.7;}
+				.ecoCarpets .half-width, .ecoCarpets img {
+					width:100%;
+				}
+             
+                .sixths div {width:calc(100% / 3);}
+                
+                #LTR {
+					flex-direction: column-reverse;
+				}
+                .ecoInfo, #RTL .ecoInfo {
+					padding:35px;
+				}
+            }
+            
+            
+		
+		  	/* TABLET ALTERATIONS */
+		  	@media all and (max-width:780px){
+				
+				.ecoproducts {
+				margin-top:50px;
+				padding:0 10px;
+				}
+				.ecoproducts .flex div {
+                padding:20px;			 
+                }
+				.ecoproducts .flex div {
+			     width:50%;			 
+		  		}
+				.ecoproducts span {			  	
+			  	font-size: 20px;
+		  		}
+                .ecoText {			
+				padding:0 15px;
+				text-align: center;
+				}
+                .ecoText p {
+				width: 90%;
+				margin: 10px auto 15px auto;
+				}
+			}
+
+           
+		  
+			/* MOBILE ALTERATIONS */
+			@media all and (max-width:480px){
+				#landing-banner {
+					display:none;
+				}
+				.ecoText h1 {
+					font-family: MontserratRegular,Arial,Sans-Serif;
+					font-size: 24px;
+				}
+				.ecoInfo h2, h3 {
+					font-size: 22px;
+					letter-spacing: 1px;
+				}
+				.ecoText p {
+					font-size: 14px;
+					width: 95%;
+				}
+				.range-intro p {
+					font-size: 16px;
+					margin-bottom: 0;
+				}
+				#ecobenefits {
+					padding: 25px 15px;
+				}
+				#ecobenefits .one-third {
+					width:100%;
+					padding: 15px;
+				}
+				.ecoproducts {
+					margin-top:35px;
+			  	}
+				.ecoproducts span {			  	
+			  	font-size: 16px;
+		  		}
+			}
+		
